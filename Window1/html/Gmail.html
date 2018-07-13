@@ -70,12 +70,24 @@
                     </div>
                   </div>
                 </div>
+                <div class="alert alert-success" id="successBanner" style="display: none;">
+            <div class="container">
+                <div class="alert-icon">
+                    <i class="material-icons">check</i>
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+                <b>Success Alert:</b> Successfully Copied to Clipboard!
+            </div>
+        </div>
                 <div class="col-md-4"style="
     position: absolute;
     top: 80px;
     right: 0px;
     padding-right: 15px;
 ">
+
                                 <ul class="nav nav-pills nav-pills-rose flex-column">
                                   <li class="nav-item"><a class="nav-link" href=".\Window1.html" onclick="location.replace(href)" target="_self" data-toggle="tab">Catchall</a></li>
                                   <li class="nav-item"><a class="nav-link active show" href=".\Gmail.html" onclick="location.replace(href)" target="_self" data-toggle="tab">Gmail</a></li>
@@ -148,7 +160,7 @@
     var copyText = document.getElementById("GeneratedEmails");
     copyText.select();
     document.execCommand("copy");
-    alert("Text successfully copied!");
+    document.getElementById("successBanner").style="inline-block";
   }
 
 </script>

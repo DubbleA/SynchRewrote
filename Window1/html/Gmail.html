@@ -141,9 +141,15 @@
     }
 
 
-return jiggedm.join('\n');
+  return jiggedm.join('\n');
   }
   
+  function copyToClip() {
+    var copyText = document.getElementById("GeneratedEmails");
+    copyText.select();
+    document.execCommand("copy");
+    alert("Text successfully copied!");
+  }
 
 </script>
 <button class="btn btn-info" onclick="document.getElementById('GeneratedEmails').innerHTML = propegateBox();" style="width: 140px;">Generate<div class="ripple-container"></div></button></div>   
@@ -154,7 +160,7 @@ return jiggedm.join('\n');
     right: 0px;
     padding-right: 30px;
 ">
-  <button class="btn btn-danger" style="
+  <button class="btn btn-danger" onclick="copyToClip()"style="
     margin-left: 0px;
     width: 140px;
     padding-left: 10px;

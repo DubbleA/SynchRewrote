@@ -1,19 +1,11 @@
-const prompt = require('prompt');
+var fs = require('fs');
+function eDot(domain, number){
 var jiggedm = [];
-prompt.start();
 
 // Get two properties
-console.log('What is your gmail address before the @');
-prompt.get(['mail', 'number'], (err, result) => {
-    if (err) return console.log(err.message);
 
-    // Log the results.
-    console.log('Command-line input received:');
-    console.log('  mail: ' + result.mail);
-    console.log('  number: ' + result.number);
-
-    var mail = (result.mail);
-    const num = (result.number);
+    var mail = (domain);
+    const num = (number);
 
     var leng = mail.length
 
@@ -42,5 +34,7 @@ prompt.get(['mail', 'number'], (err, result) => {
             }
         }
     }
-    console.log(jiggedm);
-});
+
+
+return callback(jiggedm);
+}

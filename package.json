@@ -2,7 +2,7 @@
   "name": "synchronous",
   "version": "1.0.0",
   "description": "Synchronous Pro Desktop App",
-  "main": "main.js",
+  "main": "./main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -18,5 +18,8 @@
     "random-mobile": "^1.0.2",
     "randomstring": "^1.1.5",
     "us-state-codes": "^1.1.0"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
   }
 }

@@ -18,6 +18,8 @@
   <link href="../assets/css/material-kit.css?v=2.0.4" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="./eDot.js"></script>
 </head>
 
 <body class="login-page sidebar-collapse">
@@ -82,7 +84,7 @@
 ">
               <div class="form-group bmd-form-group" style="margin-bottom: -15px;">
                 <label for="exampleInput1" class="bmd-label-floating">Gmail Address</label>
-                <input type="text" class="form-control" id="exampleInput1">
+                <input type="text" class="form-control" id="domain">
                 <span class="bmd-help" style=" width: 190px; ">everything before @ symbol</span>
               </div>
               
@@ -94,13 +96,54 @@
 ">
               <div class="form-group bmd-form-group" style="margin-bottom: -15px;">
                 <label for="exampleInput1" class="bmd-label-floating">Number to Generate</label>
-                <input type="text" class="form-control" id="exampleInput2">
+                <input type="text" class="form-control" id="numberToGen">
                 <span class="bmd-help">enter # of emails to create</span>
               </div>
             </div>
             <div style="
     padding-left: 30px;
-"><button class="btn btn-info" style="width: 140px;">Generate<div class="ripple-container"></div></button></div>   
+">
+<script id="generateButton">
+  function propegateBox() {
+    var jiggedm = [];
+    var mail = (document.getElementById('domain').value);
+    const num = (document.getElementById('numberToGen').value);
+
+    var leng = mail.length
+
+    for (let i = 1; i < num; i++) {
+        if (!(i >= leng)) {
+            if (mail.charAt(i - 1) != ' ' && mail.charAt(i) != ' ') {
+                var start = mail.substr(0, i);
+                var end = mail.substr(i);
+                var new_str = start + "." + end;
+                for (let j = i + 2; j < num + 2; j += 2) {
+                    if (!(j + 1 >= leng * 2)) {
+                        if (new_str.charAt(j - 1) != ' ' && new_str.charAt(j) != ' ') {
+                            start = new_str.substr(0, j);
+                            end = new_str.substr(j);
+                            new_str = start + "." + end;
+                            if (jiggedm.length != num) {
+                                var username = new_str.replace(/\.+$/g, '');
+                                jiggedm.push(username + '@gmail.com');
+                            } else {
+                                break;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+return jiggedm.join('\n');
+  }
+  
+
+</script>
+<button class="btn btn-info" onclick="document.getElementById('GeneratedEmails').innerHTML = propegateBox();" style="width: 140px;">Generate<div class="ripple-container"></div></button></div>   
 <div style="
     padding-left: 30px;
     position: absolute;
@@ -130,7 +173,7 @@
     margin-bottom: 17px;
 ">
                             <label class="form-control-label bmd-label-floating" for="exampleInputTextarea"> Generated Emails...</label>
-                            <grammarly-ghost spellcheck="false"><div data-id="523740fb-514d-09a1-d63e-d75a73bd8582" data-gramm_id="523740fb-514d-09a1-d63e-d75a73bd8582" data-gramm="gramm" data-gramm_editor="true" class="gr_ver_2" gramm="true" contenteditable="true" style="position: absolute; color: transparent; overflow: hidden; white-space: pre-wrap; border-radius: 0px; box-sizing: border-box; height: 109px; width: 540px; margin: 27px 0px 0px; padding: 7px 0px; z-index: 0; border-width: 0px; border-style: none; background: linear-gradient(0deg, rgb(156, 39, 176) 2px, rgba(156, 39, 176, 0) 0px) 50% 100% / 0px 100% no-repeat scroll padding-box border-box, linear-gradient(0deg, rgb(210, 210, 210) 1px, rgba(209, 209, 209, 0) 0px) 50% calc(-1px + 100%) / 100% 100% repeat scroll padding-box border-box rgba(0, 0, 0, 0); top: 0px; left: 0px;"><span style="display: inline-block; font: 400 14px/20px Roboto, Helvetica, Arial, sans-serif; color: transparent; overflow: hidden; text-align: left; float: initial; clear: none; box-sizing: border-box; vertical-align: baseline; white-space: pre-wrap; width: 100%; margin: 0px; padding: 0px; border: 0px; letter-spacing: normal; text-shadow: none; height: 109px;"></span><br></div></grammarly-ghost><textarea class="form-control" rows="5" id="exampleInputTextarea" data-gramm="true" data-txt_gramm_id="523740fb-514d-09a1-d63e-d75a73bd8582" data-gramm_id="523740fb-514d-09a1-d63e-d75a73bd8582" spellcheck="false" data-gramm_editor="true" style="z-index: auto; position: relative; line-height: 20px; font-size: 14px; transition: none; background: transparent !important;"></textarea><grammarly-btn><div class="_1BN1N Kzi1t _2DJZN" style="z-index: 2; transform: translate(510px, 106px);"><div class="_1HjH7"><div title="Protected by Grammarly" class="_3qe6h">&nbsp;</div></div></div></grammarly-btn>
+                            <grammarly-ghost spellcheck="false"><div data-id="523740fb-514d-09a1-d63e-d75a73bd8582" data-gramm_id="523740fb-514d-09a1-d63e-d75a73bd8582" data-gramm="gramm" data-gramm_editor="true" class="gr_ver_2" gramm="true" contenteditable="true" style="position: absolute; color: transparent; overflow: hidden; white-space: pre-wrap; border-radius: 0px; box-sizing: border-box; height: 109px; width: 540px; margin: 27px 0px 0px; padding: 7px 0px; z-index: 0; border-width: 0px; border-style: none; background: linear-gradient(0deg, rgb(156, 39, 176) 2px, rgba(156, 39, 176, 0) 0px) 50% 100% / 0px 100% no-repeat scroll padding-box border-box, linear-gradient(0deg, rgb(210, 210, 210) 1px, rgba(209, 209, 209, 0) 0px) 50% calc(-1px + 100%) / 100% 100% repeat scroll padding-box border-box rgba(0, 0, 0, 0); top: 0px; left: 0px;"><span style="display: inline-block; font: 400 14px/20px Roboto, Helvetica, Arial, sans-serif; color: transparent; overflow: hidden; text-align: left; float: initial; clear: none; box-sizing: border-box; vertical-align: baseline; white-space: pre-wrap; width: 100%; margin: 0px; padding: 0px; border: 0px; letter-spacing: normal; text-shadow: none; height: 109px;"></span><br></div></grammarly-ghost><textarea class="form-control" rows="5" id="GeneratedEmails" data-gramm="true" data-txt_gramm_id="523740fb-514d-09a1-d63e-d75a73bd8582" data-gramm_id="523740fb-514d-09a1-d63e-d75a73bd8582" spellcheck="false" data-gramm_editor="true" style="z-index: auto; position: relative; line-height: 20px; font-size: 14px; transition: none; background: transparent !important;"></textarea><grammarly-btn><div class="_1BN1N Kzi1t _2DJZN" style="z-index: 2; transform: translate(510px, 106px);"><div class="_1HjH7"><div title="Protected by Grammarly" class="_3qe6h">&nbsp;</div></div></div></grammarly-btn>
                         </div>
               </div>
               

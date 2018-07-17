@@ -56,7 +56,7 @@ csv({
                 last_name: jsonObj[i]["lastName"],
                 addr1: jsonObj[i]["address"],
                 addr2: jsonObj[i]["apt"],
-                zip: jsonObj[i]["zipCode"],
+                zip: ("00000" + jsonObj[i]["zipCode"]).substr(-5, 5),
                 city: jsonObj[i]["city"],
                 country: jsonObj[i]["country"],
                 state: states.getStateNameByStateCode(jsonObj[i]["state"])
@@ -71,7 +71,7 @@ csv({
                 last_name: jsonObj[i]["billingLastName"],
                 addr1: jsonObj[i]["billingAddress"],
                 addr2: jsonObj[i]["billingApt"],
-                zip: jsonObj[i]["billingZipCode"],
+                zip: ("00000" + jsonObj[i]["billingZipCode"]).substr(-5, 5),
                 city: jsonObj[i]["billingCity"],
                 country: jsonObj[i]["billingCountry"],
                 state: states.getStateNameByStateCode(jsonObj[i]["billingState"]),

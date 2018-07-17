@@ -15,12 +15,15 @@ csv({
         console.log(jsonObj);
         var finaljson = [];
         for (var i = 0; i < jsonObj.length; i++) {
+            
             var json = jsonObj[i];
             var creditCardType = require('credit-card-type');
             var carNum = jsonObj[i]["cardNumber"];
             var numString = carNum.toString();
             var cards = creditCardType(numString);
             var cards = (cards[0].type);
+
+            
 
             if (cards == "visa") {
                 var carddata = "Visa";

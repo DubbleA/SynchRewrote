@@ -58,10 +58,10 @@ function ssconv1() {
                 var prof = jsonObj[i]["profile"];
                 var profString = prof.toString();
 
-                var bzip = jsonObj[i]["zipCode"];
+                var bzip = ("00000" + jsonObj[i]["zipCode"]).substr(-5, 5);
                 var bzipString = bzip.toString();
 
-                var szip = jsonObj[i]["billingZipCode"];
+                var szip = ("00000" + jsonObj[i]["billingZipCode"]).substr(-5, 5);
                 var szipString = szip.toString();
 
                 var pho = jsonObj[i]["phone"];

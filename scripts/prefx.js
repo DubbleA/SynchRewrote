@@ -19,7 +19,7 @@ prompt.get(['addyl1', 'number'], (err, result) => {
     for (let i = 0; i < num; i++) {
         // makes random 11 digit string
         let randstr = randomstring.generate({
-            length: 3,
+            length: 4,
             charset: 'alphabetic'
         });
         let pre = `${randstr} ${addyl1}`;

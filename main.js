@@ -3,8 +3,10 @@ let mainWindow;
 
 app.on('ready', () => {
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 600
+    useContentSize:true,
+    transparent:true,
+    resizable:false,
+    frame: false
   });
-  mainWindow.loadURL('file://' + __dirname + '/Window1/html/Address.html');
-});
+  mainWindow.loadURL('file://' + __dirname + '/Window1/html/Window1.html');
+}); 

@@ -1,25 +1,22 @@
 {
   "name": "synchronous",
   "version": "1.0.0",
-  "description": "Synchronous Pro Desktop App",
-  "main": "./main.js",
+  "description": "synchronous pro",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "author": "Aaryan Gupta, Dan Gillis",
-  "license": "None",
-  "dependencies": {
-    "credit-card-type": "^7.0.0",
-    "csvtojson": "^2.0.6",
-    "electron": "^2.0.4",
-    "fs": "0.0.1-security",
-    "json2csv": "^4.1.6",
-    "random-fullName": "^1.0.0",
-    "random-mobile": "^1.0.2",
-    "randomstring": "^1.1.5",
-    "us-state-codes": "^1.1.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DubbleA/SynchronousPro.git"
   },
-  "devDependencies": {
-    "electron-prebuilt": "^1.4.13"
+  "author": "Aaryan Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DubbleA/SynchronousPro/issues"
+  },
+  "homepage": "https://github.com/DubbleA/SynchronousPro#readme",
+  "dependencies": {
+    "electron": "^2.0.5"
   }
 }

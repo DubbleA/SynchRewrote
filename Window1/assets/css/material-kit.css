@@ -10916,7 +10916,7 @@ fieldset[disabled][disabled] .btn-group-raised .btn,
 }
 
 body {
-  background-color: #eee;
+  background-color: rgba(204, 0, 255, 0);
   color: #3C4858;
   font-weight: 300;
 }

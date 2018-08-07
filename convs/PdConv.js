@@ -79,7 +79,7 @@ function pdConv() {
                     zipcode: ("00000" + jsonObj[i]["zipCode"]).substr(-5, 5)
                 };
 
-                var profToWrite = {
+                var pro = {
                     billing: billing,
                     card: card,
                     email: jsonObj[i]["email"],
@@ -88,7 +88,8 @@ function pdConv() {
                     match: jsonObj[i]["billingMatch"],
                     shipping: shipping,
                     title: jsonObj[i]["profile"]
-                };
+                
+            };
 
 
                 /*
@@ -144,12 +145,12 @@ function pdConv() {
                     one_checkout: oneUseOnly
                 }; */
                 finaljson.push(JSON.stringify({
-                    profToWrite
-                }, null, 2).slice(1, (JSON.stringify({
-                    profToWrite
+                    pro
+                }, null, 2).slice(10, (JSON.stringify({
+                    pro
                 }, null, 2).length - 1)));
-            }
-            fs.writeFile('pdProfiles.json', '[{' + finaljson.slice(0, jsonObj.length + 1) + '}]', 'utf8');
+                }
+                fs.writeFile('pdProfiles.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
         })
 };
 pdConv();

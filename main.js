@@ -2,10 +2,12 @@ const {app, BrowserWindow} = require('electron');
 let mainWindow;
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow ({
+    width: 995,
+    height: 555,
     useContentSize:true,
     transparent:true,
-    //resizable:false,
+    resizable:false,
     frame: false,
     
     

@@ -1,6 +1,6 @@
 function CyberConv() {
 const filepath = document.getElementById('file_input_file').files[0].path;
-const fs = require('fs')
+var fs = require('browserify-fs');
 var states = require('us-state-codes');
 const csv = require('csvtojson');
 csv({

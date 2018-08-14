@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/DubbleA/SynchronousPro#readme",
   "dependencies": {
+    "browserify-fs": "^1.0.0",
     "credit-card-type": "^7.0.0",
     "csvtojson": "^2.0.8",
     "electron": "^2.0.5",
+    "fs": "0.0.1-security",
     "json2csv": "^4.2.0",
     "prompt": "^1.0.0",
     "randomstring": "^1.1.5",

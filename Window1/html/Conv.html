@@ -121,7 +121,34 @@
 ">
         <i class="material-icons">file_upload</i>
 <input id="file_input_file" name="file_input_file" class="none" type="file" onchange="var fp = document.getElementById('file_input_file').files[0].path; file_path_display.innerHTML = fp" style="display: none;"/>
-      </label><div id="file_path_display"></div></div> 
+      </label><div id="file_path_display"></div>
+    </div> 
+
+<button class="btn btn-info" style="
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    border-bottom-width: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    width: 41px;
+    height: 41px;
+">
+<label class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored"
+  style="
+    margin-bottom: 0px;
+    width: 41px;
+    height: 41px;
+    margin-top: 0px;
+    border-top-width: 15px;
+    padding-top: 12px;
+">
+        <i class="material-icons">file_upload</i>
+    <input id="file_save" name="file_save" class="none" type="file" webkitdirectory onchange="var saved = document.getElementById('file_save').files[0].path" style="display: none;"/>
+    </div> 
       
     <div class="ripple-container"></div>
   </button>
@@ -135,6 +162,7 @@
 
 <script>
 function checkboxes(){
+
   if (document.getElementById("cyber").checked == true) {
     CyberConv();
   }

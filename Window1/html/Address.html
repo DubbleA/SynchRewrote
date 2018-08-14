@@ -142,13 +142,18 @@
     padding-right: 30px;
 ">
 <script>
-  function copyToClip() {
+  function copyToClip1() {
     var copyText = document.getElementById("genLine1");
     copyText.select();
     document.execCommand("copy");
     document.getElementById("successBanner").style = "inline-block";
   }
-
+  function copyToClip2() {
+    var copyText = document.getElementById("genLine2");
+    copyText.select();
+    document.execCommand("copy");
+    document.getElementById("successBanner").style = "inline-block";
+  }
   function checkboxes() {
 
     if (document.getElementById("AptJig").checked == true) {
@@ -166,7 +171,7 @@
   }
 
 </script>
-<button class="btn btn-danger" onclick="copyToClip()" style="
+<button class="btn btn-danger" onclick="copyToClip2()" style="
     margin-left: 0px;
     width: 140px;
     padding-left: 10px;
@@ -182,7 +187,7 @@
     right: 0px;
     padding-right: 30px;
 ">
-<button class="btn btn-danger" onclick="copyToClip()" style="
+<button class="btn btn-danger" onclick="copyToClip1()" style="
     margin-left: 0px;
     width: 140px;
     padding-left: 10px;

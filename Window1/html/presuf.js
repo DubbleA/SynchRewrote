@@ -8,6 +8,12 @@ var prefx = [];
     const l1ss= l1f.substring(0, lastIndex);
     const num = (document.getElementById('userInput2').value);
     
+    if (num > 501) {
+        num = 501;
+    } else {
+        const num = (document.getElementById('userInput2').value);
+    }
+    
     for (let i = 0; i < num; i++) {
         // makes random 11 digit string
         let randstr = randomstring.generate({

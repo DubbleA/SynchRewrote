@@ -14311,6 +14311,10 @@ textarea {
 .alert.alert-success {
   background-color: #55b559;
   color: #ffffff;
+  position:  absolute;
+  width: 530px;
+  right: 0px;
+  top: 200px;
 }
 
 .alert.alert-success a,

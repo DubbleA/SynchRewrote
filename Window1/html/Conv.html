@@ -89,7 +89,8 @@
 <div style="
     padding-left: 30px;
 ">
-  <button class="btn btn-info" style="width: 140px;position:  absolute;left: 30px; bottom:  30px;">Convert
+<script src="./cyberBundle.js"></script>
+  <button class="btn btn-info" onclick="checkboxes()" style="width: 140px;position:  absolute;left: 30px; bottom:  30px;">Convert
     <div class="ripple-container"></div>
   </button>
 </div>
@@ -135,7 +136,7 @@
 <script>
 function checkboxes(){
   if (document.getElementById("cyber").checked == true) {
-
+    CyberConv();
   }
 }
 

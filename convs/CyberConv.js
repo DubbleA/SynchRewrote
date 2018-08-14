@@ -1,5 +1,5 @@
-function cyberConv() {
-const filepath = 'TestDashe.csv'
+function CyberConv() {
+const filepath = document.getElementById('file_input_file').files[0].path;
 const fs = require('fs')
 var states = require('us-state-codes');
 const csv = require('csvtojson');
@@ -98,4 +98,6 @@ csv({
         }
         fs.writeFile('CyberProfiles.json', '{' + finaljson.slice(0, jsonObj.length + 1) + '}', 'utf8');
     })};
+
+window.CyberConv = CyberConv;
   

@@ -98,4 +98,4 @@ csv({
         }
         fs.writeFile('CyberProfiles.json', '{' + finaljson.slice(0, jsonObj.length + 1) + '}', 'utf8');
     })};
-    cyberConv();
+  

@@ -4,7 +4,6 @@ function ghconv() {
     var states = require('us-state-codes');
     const csv = require('csvtojson');
 
-    function ghconv1() {
         csv({
                 checkType: true,
                 noheader: false,
@@ -111,12 +110,8 @@ function ghconv() {
                 fs.writeFile(document.getElementById('file_save').files[0].path + '/ghoTemp.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
             })
 
-    };
-
-    function ghconv2() {
         const Json2csvParser = require('json2csv').Parser;
-        const fs = require('fs');
-        const myJson = require('./ghoTemp.json')
+
 
         const fields = [{
             label: "Profile Name",
@@ -192,10 +187,7 @@ function ghconv() {
         const csv = json2csvParser.parse(myJson);
         fs.writeFile(document.getElementById('file_save').files[0].path + '/ghoProfiles.csv', csv, 'utf8');
         fs.unlink("./ghoTemp.json");
-    };
+    }
 
-    ghconv1();
-    setTimeout(ghconv2, 1500);
-};
 
 window.ghconv = ghconv;

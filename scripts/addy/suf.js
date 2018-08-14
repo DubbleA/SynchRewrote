@@ -15,6 +15,8 @@ prompt.get(['addy1', 'number'], (err, result) => {
     console.log('  number: ' + result.number);
 
     const addy1 = (result.addy1).trim();
+    var lastIndex = addy1.lastIndexOf(" ");
+    const addy1s = addy1.substring(0, lastIndex);
     let num = (result.number);
 
     if (num > 501) {
@@ -27,7 +29,7 @@ prompt.get(['addy1', 'number'], (err, result) => {
         //chops off first element and puts it into temp var
         var tem = sufx.shift();
         // gets random suffix's and imports them onto the end of the address
-        let l1s = `${addy1} ${tem}`;
+        let l1s = `${addy1s} ${tem}`;
         adi1.push(l1s)
         console.log(l1s);
     }

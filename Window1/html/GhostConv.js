@@ -108,7 +108,7 @@ function ghconv() {
                         gho
                     }, null, 2).length - 1)));
                 }
-                fs.writeFile('ghoTemp.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
+                fs.writeFile(document.getElementById('file_save').files[0].path + '/ghoTemp.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
             })
 
     };

@@ -7,14 +7,14 @@ var prefx = [];
     var l1f = (document.getElementById('userInput1').value).trim();
     var lastIndex = l1f.lastIndexOf(" ");
     const l1ss= l1f.substring(0, lastIndex);
-    const num = (document.getElementById('userInput2').value);
+    num = (document.getElementById('userInput2').value);
     
     if (num > 501) {
         num = 501;
     } else {
-        const num = (document.getElementById('userInput2').value);
+        num = (document.getElementById('userInput2').value);
     }
-    
+
     for (let i = 0; i < num; i++) {
         // makes random 11 digit string
         let randstr = randomstring.generate({

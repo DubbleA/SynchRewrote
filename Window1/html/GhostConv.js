@@ -184,7 +184,7 @@ function ghconv() {
             quote: '',
             delimiter: ','
         });
-        const csv = json2csvParser.parse(myJson);
+        const csv = json2csvParser.parse('./ghoTemp');
         fs.writeFile(document.getElementById('file_save').files[0].path + '/ghoProfiles.csv', csv, 'utf8');
         fs.unlink("./ghoTemp.json");
     }

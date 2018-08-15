@@ -26,9 +26,11 @@
           <div class="card card-login" style=" width: 800px; height: 550px; margin-bottom: 0px; margin-top: 0px;">
               <div class="card card-nav-tabs card-plain">
                 <div class="card-header card-header-danger" style="-webkit-app-region: drag">
-                  <button class="btn btn-just-icon btn-round btn-youtube" style="-webkit-app-region: no-drag; position: absolute; top: -17px; right: 55px">
-                            <i class="fa fa-youtube"> </i>
-                        <div class="ripple-container"></div></button>
+                  <a onclick="newWindow('http://www.youtube.com');">
+                <button class="btn btn-just-icon btn-round btn-youtube" style="position: absolute; top: -17px; right: 55px">
+                  <i class="fa fa-youtube"> </i>
+                  <div class="ripple-container"></div></a> 
+                </button>
                         <script type="text/javascript">
                   function newWindow(href) {
                     var open = require('open');
@@ -93,17 +95,20 @@
             <div style="
     padding-left: 30px;
 ">
+<a onclick="newWindow('https://docs.google.com/spreadsheets/d/1b0Qdp7Pyc45ZoCmbZRI0Df_5l36UkMyJdIN8xhMgDa8/edit?usp=sharing');">
 <button class="btn btn-info" style="width: 140px;position:  absolute;right: 30px; top:  110px;">Get Template
   <div class="ripple-container"></div>
-</button>
+</button></a>
 </div>
 
 <div style="
     padding-left: 30px;
 ">
+<a onclick="newWindow('http://www.youtube.com');">
   <button class="btn btn-info" style="width: 140px;position: absolute;right: 30px;top: 160px;padding-left: 20px;padding-right: 20px;">Video Tutorial
+  
     <div class="ripple-container"></div>
-  </button>
+  </button></a>
 </div>
 
 

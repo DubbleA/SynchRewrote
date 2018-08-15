@@ -26,9 +26,11 @@
           <div class="card card-login" class="card card-login" style=" width: 800px; height: 550px; margin-bottom: 0px; margin-top: 0px;">
               <div class="card card-nav-tabs card-plain">
                 <div class="card-header card-header-danger" style="-webkit-app-region: drag">
-                  <button class="btn btn-just-icon btn-round btn-youtube" style="position: absolute; top: -17px; right: 55px">
-                            <i class="fa fa-youtube"> </i>
-                        <div class="ripple-container"></div></button>
+                  <a onclick="newWindow('http://www.youtube.com');">
+                <button class="btn btn-just-icon btn-round btn-youtube" style="position: absolute; top: -17px; right: 55px">
+                  <i class="fa fa-youtube"> </i>
+                  <div class="ripple-container"></div></a> 
+                </button>
                         <script type="text/javascript">
                   function newWindow(href) {
                     var open = require('open');

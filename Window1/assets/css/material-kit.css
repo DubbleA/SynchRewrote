@@ -14326,6 +14326,10 @@ textarea {
 .alert.alert-info {
   background-color: #00cae3;
   color: #ffffff;
+  position : absolute;
+  width: 530px;
+  right: 30px;
+  bottom: 19px;
 }
 
 .alert.alert-info a,

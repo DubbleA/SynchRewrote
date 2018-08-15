@@ -68,19 +68,19 @@
                 </div>
 
             </div>
-              <div class="alert alert-success" id="successBanner" style="display: none;">
-                <div class="container">
-                  <div class="alert-icon">
+            <div class="alert alert-info"id="successBanner" style="display: none;">
+            <div class="container">
+                <div class="alert-icon">
                     <i class="material-icons">check</i>
-                  </div>
-                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">
-                      <i class="material-icons">clear</i>
-                    </span>
-                  </button>
-                  <b>Success Alert:</b> Successfully Converted Profiles!
                 </div>
-              </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">clear</i></span>
+                </button>
+
+                <b>Success Alert:</b> Successfully Converted Profiles!
+            </div>
+        </div>
+              
             <div style="
     padding-left: 30px;
 ">
@@ -110,11 +110,11 @@
 <script src="./KickConv.js"></script>
 <script src="./ssconv.js"></script>
 <script>
-  function copyToClip() {
+  function convertee() {
     document.getElementById("successBanner").style = "inline-block";
   }
 </script>
-  <button class="btn btn-info" onclick="checkboxes()" style="width: 140px;position:  absolute;left: 30px; bottom:  30px;">Convert
+  <button class="btn btn-info" onclick="convertee()" style="width: 140px;position:  absolute;left: 30px; bottom:  30px;">Convert
     <div class="ripple-container"></div>
   </button>
 </div>

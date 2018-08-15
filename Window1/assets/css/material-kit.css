@@ -244,6 +244,7 @@ label {
 
 button {
   border-radius: 0;
+  -webkit-app-region: no-drag;
 }
 
 button:focus {

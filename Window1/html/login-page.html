@@ -45,12 +45,22 @@
                       <i class="material-icons">lock_outline</i>
                     </span>
                   </div>
-                  <input id="product_key" type="" class="form-control" placeholder="Program Key...">
+                 
+                  <input id="product_key" onkeypress="isEnter(event)" type="" class="form-control" placeholder="Program Key...">
                 </div>
               </div>
               <div class="text-center">
                 <script type="text/javascript" src="./keycheck.js"></script>
-                <a class="btn btn-primary btn-link btn-wd btn-lg" onclick="keycheck()" >Activate</a>
+                <a class="btn btn-primary btn-link btn-wd btn-lg" id="activate_btn" onclick="keycheck()" >Activate</a>
+                <script type="text/javascript">
+                   function isEnter(event) {
+                    var x = event.which || event.keyCode;
+                    if(x == 13) {
+                      event.preventDefault();
+                      document.getElementById("activate_btn").click();
+                    }
+                   }
+                 </script>
               </div>
             </form>
           </div>

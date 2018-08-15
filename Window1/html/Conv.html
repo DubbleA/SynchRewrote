@@ -96,6 +96,7 @@
 <script src="./PdConv.js"></script>
 <script src="./wopConv.js"></script>
 <script src="./KickConv.js"></script>
+<script src="./ssconv.js"></script>
   <button class="btn btn-info" onclick="checkboxes()" style="width: 140px;position:  absolute;left: 30px; bottom:  30px;">Convert
     <div class="ripple-container"></div>
   </button>
@@ -192,6 +193,9 @@ function checkboxes(){
   }
   if (document.getElementById("moji").checked == true) {
     kiconv();
+  }
+   if (document.getElementById("ss").checked == true) {
+    ssconv();
   }
 }
 

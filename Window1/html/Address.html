@@ -32,10 +32,18 @@
                   <i class="fa fa-youtube"> </i>
                   <div class="ripple-container"></div>
                 </button>
+                <script type="text/javascript">
+                  function newWindow(href) {
+                    var open = require('open');
+                    open(href);
+                }
+
+                </script>
+                <a onclick="newWindow('http://www.twitter.com/synchronous_pro');">
                 <button class="btn btn-just-icon btn-round btn-twitter" style="position: absolute; top: -17px; right: 105px">
                   <i class="fa fa-twitter"></i>
                   <div class="ripple-container"></div>
-                </button>
+                </button></a>
                 <button type="button" onclick="window.close()" class="close" data-dismiss="alert" aria-label="Close" style="position: absolute; top: -5px; right: 20px">
                   <span aria-hidden="true">
                     <i class="material-icons">clear</i>

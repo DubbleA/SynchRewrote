@@ -21,12 +21,11 @@
     "credit-card-type": "^7.0.0",
     "csvtojson": "^2.0.8",
     "electron": "^2.0.5",
-    "electron-prebuilt": "^1.4.13",
     "fs": "0.0.1-security",
     "json2csv": "^4.2.0",
+    "open": "0.0.5",
     "prompt": "^1.0.0",
     "randomstring": "^1.1.5",
     "us-state-codes": "^1.1.1"
-  },
-  "devDependencies": {}
+  }
 }

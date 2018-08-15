@@ -25,7 +25,7 @@
         <div style=" width: 800px; ">
           <div class="card card-login" style=" width: 800px; height: 550px; margin-bottom: 0px; margin-top: 0px;">
               <div class="card card-nav-tabs card-plain">
-                <div class="card-header card-header-danger">
+                <div class="card-header card-header-danger" style="-webkit-app-region: drag">
                   <button class="btn btn-just-icon btn-round btn-youtube" style="position: absolute; top: -17px; right: 55px">
                             <i class="fa fa-youtube"> </i>
                         <div class="ripple-container"></div></button>
@@ -93,6 +93,7 @@
 <script src="./dasheConv.js"></script>
 <script src="./eveConv.js"></script>
 <script src="./GhostConv.js"></script>
+<script src="./PdConv.js"></script>
   <button class="btn btn-info" onclick="checkboxes()" style="width: 140px;position:  absolute;left: 30px; bottom:  30px;">Convert
     <div class="ripple-container"></div>
   </button>
@@ -180,6 +181,9 @@ function checkboxes(){
   }
   if (document.getElementById("ghost").checked == true) {
     ghconv();
+  }
+  if (document.getElementById("pd").checked == true) {
+    pdConv();
   }
 }
 

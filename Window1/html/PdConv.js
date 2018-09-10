@@ -1,6 +1,7 @@
 function pdConv() {
     const filepath = document.getElementById('file_input_file').files[0].path;
-    const fs = require('fs')
+    const fs = require('fs');
+    const randomstring = require('randomstring');
     var states = require('us-state-codes');
     const csv = require('csvtojson');
     csv({
@@ -18,6 +19,17 @@ function pdConv() {
                 var numString = carNum.toString();
                 var cards = creditCardType(numString);
                 var cards = (cards[0].type);
+                
+                let randlet = randomstring.generate({
+                    length: 4,
+                    charset: 'alphabetic'
+                });
+                let randnum = randomstring.generate({
+                    length: 4,
+                    charset: 'numeric'
+                });
+                var id = `${randlet}${randnum}`;
+
 
                 if (cards == "visa") {
                     var carddata = "Visa";
@@ -47,6 +59,12 @@ function pdConv() {
                 } else {
                     var oneUseOnly = false;
                 }
+                
+                var exp = jsonObj[i]["cardExpiry"].split("/");
+                var exp_year = exp[1];
+                var exp_month = exp[0];
+                var cardsp = `${exp_month} / ${exp_year}`
+                
 
                 var billing = {
                     address1: jsonObj[i]["billingAddress"],
@@ -62,7 +80,7 @@ function pdConv() {
 
                 var card = {
                     code: newCVV,
-                    expire: jsonObj[i]["cardExpiry"],
+                    expire: cardsp,
                     name: fullname,
                     number: jsonObj[i]["cardNumber"]
                 };
@@ -83,7 +101,7 @@ function pdConv() {
                     billing: billing,
                     card: card,
                     email: jsonObj[i]["email"],
-                    id: "EIYF7348",
+                    id: id,
                     limit: oneUseOnly,
                     match: jsonObj[i]["billingMatch"],
                     shipping: shipping,

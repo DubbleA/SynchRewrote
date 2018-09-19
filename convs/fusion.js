@@ -86,7 +86,7 @@ function fusconv() {
                     expMonth: exp_month,
                     expYear: exp_year
                 }
-                var prof = {
+                var pro = {
                         name: jsonObj[i]["profile"],
                         useOnce: oneUseOnly,
                         shippingAdress: shipaddy,
@@ -94,12 +94,12 @@ function fusconv() {
                         paymentDetails: pdeets
                         };
                 finaljson.push(JSON.stringify({
-                   "profiles": [prof
-                   ]}, null, 2).slice(1, (JSON.stringify({
-                   "profiles": [prof
-                   ]}, null, 2).length - 1)));
-            }
-            fs.writeFile('fusionProfiles.json', '{' + finaljson.slice(0, jsonObj.length + 1) + '}', 'utf8');
+                    pro
+                }, null, 2).slice(10, (JSON.stringify({
+                    pro
+                }, null, 2).length - 1)));
+                }
+            fs.writeFile('fusionProfiles.json', '{ "profiles": [' + finaljson.slice(0, jsonObj.length + 1) + ']}', 'utf8');
         });
 
 };

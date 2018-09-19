@@ -80,7 +80,7 @@ function supconv() {
                     sup
                 }, null, 2).length - 1)));
             }
-            fs.writeFile('SupremeSimplifiedProfiles.json', '[' + finaljson.slice(0, jsonObj.length + 1) + ']', 'utf8');
+            fs.writeFile('SupremeSimplifiedProfiles.json', '{ "billings": [' + finaljson.slice(0, jsonObj.length + 1) + ']}', 'utf8');
         });
 
 };

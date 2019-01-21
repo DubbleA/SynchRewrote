@@ -16,6 +16,6 @@ app.on('ready', () => {
     
   });
   
-  mainWindow.loadURL('file://' + __dirname + '/Window1/html/login-page.html');
+  mainWindow.loadURL('file://' + __dirname + '/Window1/html/Window1.html');
   
 }); 
